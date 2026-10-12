@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trilocale Milano · 3D Tur</title>
+    <meta name="description" content="Milano'daki üç odalı dairede scroll ile ilerleyen etkileşimli 3D tur." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M4 15 16 5l12 10v12H4z%22 fill=%22%23f4c27a%22/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="scene" aria-label="Dairenin 3D modeli"></canvas>
+
+    <div id="loader">
+      <div class="loader__inner">
+        <span class="loader__title">Trilocale · Milano</span>
+        <div class="loader__track"><div id="loader-bar"></div></div>
+        <span class="loader__hint">Model yükleniyor…</span>
+      </div>
+    </div>
+
+    <header class="topbar" data-ui>
+      <a class="brand" href="#" aria-label="Başa dön">Trilocale<span>Milano</span></a>
+      <span id="room-chip" class="room-chip">Genel bakış</span>
+      <button id="mode-toggle" class="btn">Serbest keşif</button>
+    </header>
+
+    <nav id="dots" class="dots" data-ui aria-label="Tur durakları"></nav>
+
+    <main id="tour"></main>
+
+    <aside id="item-panel" class="panel" data-ui aria-live="polite">
+      <button class="panel__close" data-action="close" aria-label="Kapat">×</button>
+      <span class="panel__room eyebrow"></span>
+      <h3 class="panel__title"></h3>
+      <p class="panel__text"></p>
+    </aside>
+
+    <div id="free-hint" class="free-hint" data-ui>
+      Sürükle: döndür · Tekerlek: yakınlaş · Sağ tık: kaydır · Eşyaya tıkla: odaklan · Esc: geri
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <footer class="credit" data-ui>
+      Model: <a href="https://sketchfab.com/3d-models/trilocale-via-boncompagni-milano-dd261cf6c2e647cab915f015230bb15e" target="_blank" rel="noopener">“Trilocale Via Boncompagni Milano”</a>,
+      <a href="https://sketchfab.com/FabioSiccardi" target="_blank" rel="noopener">Fabio Siccardi</a> ·
+      <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

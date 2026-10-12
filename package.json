@@ -1,0 +1,26 @@
+{
+  "name": "trilocale-3d-tour",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:model": "node scripts/build-model.mjs",
+    "predev": "npm run build:model",
+    "dev": "vite",
+    "build": "npm run build:model && vite build",
+    "preview": "vite preview",
+    "shot": "node scripts/screenshot.mjs"
+  },
+  "dependencies": {
+    "camera-controls": "^3.1.2",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "^4.5.1",
+    "@gltf-transform/extensions": "^4.5.1",
+    "@gltf-transform/functions": "^4.5.1",
+    "lil-gui": "^0.21.0",
+    "playwright-core": "^1.64.0",
+    "vite": "^8.3.4"
+  }
+}
